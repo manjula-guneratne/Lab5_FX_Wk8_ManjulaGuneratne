@@ -33,12 +33,14 @@ public class EmploymentApplicationForm extends StackPane{
 		pane.add(new Label("Email *"), 0, 3);
 		TextField emailField = new TextField();
 		pane.add(emailField, 0, 4);
+		// Expands 2 rows
 		GridPane.setColumnSpan(emailField, 2);
 		GridPane.setHgrow(emailField, Priority.ALWAYS);
 		
 		pane.add(new Label("Portfolio website *"), 0, 5);
 		TextField portfolioField = new TextField();
 		pane.add(portfolioField, 0, 6);
+		// Adds text to Textfield
 		portfolioField.setText("http://");
 		GridPane.setColumnSpan(portfolioField, 2);
 		GridPane.setHgrow(portfolioField, Priority.ALWAYS);
@@ -85,7 +87,9 @@ public class EmploymentApplicationForm extends StackPane{
 		GridPane.setHgrow(companyField, Priority.ALWAYS);		
 		
 		pane.add(new Label("Reference / Comments / Questions"), 0, 17);
+		// Multiple row Textarea
 		TextArea multiInput = new TextArea();
+		// TextArea set to have 10 rows
 		multiInput.setPrefRowCount(10);
 		multiInput.setWrapText(true);
 		

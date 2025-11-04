@@ -13,9 +13,9 @@ public class Main extends Application {
 		BorderPane pane = new BorderPane();
 		// Place nodes in the pane
 		pane.setTop(new Book());		
-		pane.setRight(new CustomPane("Right"));
+		//pane.setRight(new CustomPane("Right"));
 		pane.setBottom(new CustomPane("2025/10/29"));
-		pane.setLeft(new CustomPane("Left"));
+		//pane.setLeft(new CustomPane("Left"));
 		pane.setCenter(new EmploymentApplicationForm());	
 			
 		// Create a scene and place it in the stages

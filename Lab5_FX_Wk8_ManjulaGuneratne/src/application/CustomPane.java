@@ -7,6 +7,7 @@ import javafx.scene.layout.StackPane;
 //Define a custom pane to hold a label in the center of the pane
 public class CustomPane extends StackPane{
 	
+		// Starting template grid
 		public CustomPane(String title) {
 			getChildren().add(new Label(title));
 			setStyle("-fx-border-color: red");
