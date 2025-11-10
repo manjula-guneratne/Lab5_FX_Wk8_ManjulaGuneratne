@@ -1,7 +1,9 @@
 package application;
 
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
@@ -90,7 +92,7 @@ public class EmploymentApplicationForm extends StackPane{
 		// Multiple row Textarea
 		TextArea multiInput = new TextArea();
 		// TextArea set to have 10 rows
-		multiInput.setPrefRowCount(10);
+		multiInput.setPrefRowCount(8);
 		multiInput.setWrapText(true);
 		
 		// Add TextArea to GridPane, spanning 2 columns for full width
@@ -100,7 +102,21 @@ public class EmploymentApplicationForm extends StackPane{
 		GridPane.setHgrow(multiInput, Priority.ALWAYS);
 		GridPane.setVgrow(multiInput, Priority.ALWAYS);		
 		
+		Button btnSubmit = new Button("Submit");
+		btnSubmit.setMaxWidth(Double.MAX_VALUE); // fill available width
+		pane.add(btnSubmit, 0, 19, 2, 1); // span 2 columns
+		GridPane.setHgrow(btnSubmit, Priority.ALWAYS); // allow horizontal growth
+
+		Button btnRead = new Button("Read");
+		btnRead.setMaxWidth(Double.MAX_VALUE); // fill available width
+		pane.add(btnRead, 0, 20, 2, 1); // span 2 columns
+		GridPane.setHgrow(btnRead, Priority.ALWAYS); // allow horizontal growth
+
+		
+		
 		getChildren().add(pane);
+		
+		
 	}
 
 }
