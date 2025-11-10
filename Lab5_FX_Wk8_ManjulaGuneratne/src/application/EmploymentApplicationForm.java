@@ -102,16 +102,21 @@ public class EmploymentApplicationForm extends StackPane{
 		GridPane.setHgrow(multiInput, Priority.ALWAYS);
 		GridPane.setVgrow(multiInput, Priority.ALWAYS);		
 		
-		Button btnSubmit = new Button("Submit");
+		Button btnSubmit = new Button("Submit");		
 		btnSubmit.setMaxWidth(Double.MAX_VALUE); // fill available width
 		pane.add(btnSubmit, 0, 19, 2, 1); // span 2 columns
 		GridPane.setHgrow(btnSubmit, Priority.ALWAYS); // allow horizontal growth
+		// Submit button Event handler
+		SubmitHandlerClass handler1 = new SubmitHandlerClass();
+		btnSubmit.setOnAction(handler1);
 
 		Button btnRead = new Button("Read");
 		btnRead.setMaxWidth(Double.MAX_VALUE); // fill available width
 		pane.add(btnRead, 0, 20, 2, 1); // span 2 columns
 		GridPane.setHgrow(btnRead, Priority.ALWAYS); // allow horizontal growth
-
+		// Read button Event handler
+		ReadHandlerClass handler2 = new ReadHandlerClass();
+		btnRead.setOnAction(handler2);
 		
 		
 		getChildren().add(pane);
